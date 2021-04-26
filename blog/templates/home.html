@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <h1 class="log"> howdy {{ user.username }}!
+        <p><a href="{% url 'logout' %}">Log Out</a></p></h1>
+        <p><a href="{% url 'change_password' %}">Change Password</a></p>
+
+    {% else %}
+       <h1 class="log">Welcome Anonymous!
+        <p>You are not Logged in</p>
+        <a href="{% url 'login' %}">Log In</a></h1>
+        <p>if you don't have an account with us<a href="{% url 'register' %}">Click here to sign up.</a></p>
+        
+    {% endif %}
+    {% for post in object_list %}
+    <div class='post-entry'>
+        <h1><a href="{% url 'post_detail' post.pk %}">{{post.title}}</a></h1>
+        <P>{{ post.body }}</P>
+    </div>
+    {% endfor %}
+{% endblock %}    
