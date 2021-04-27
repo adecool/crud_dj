@@ -12,7 +12,17 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-from decouple import config
+import environ
+env = environ.Env()
+)
+# reading .env file
+environ.Env.read_env()
+
+# False if not in os.environ
+DEBUG = env('DEBUG')
+
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+SECRET_KEY = env('SECRET_KEY')
 
 
 
@@ -30,8 +40,6 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # False if not in os.environ
