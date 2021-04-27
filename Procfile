@@ -1,1 +1,1 @@
-web: gunicorn --chdir src blog.wsgi --log-file -
+web: gunicorn blog.wsgi
