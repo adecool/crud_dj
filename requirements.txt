@@ -1,6 +1,5 @@
 pip==21.1
 pipenv==2020.11.15
-django-heroku==0.3.1
 python==3.7.4
 django==3.2
 django-environ==0.4.5
