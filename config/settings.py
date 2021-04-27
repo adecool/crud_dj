@@ -19,7 +19,6 @@ from pathlib import Path
 env = environ.Env()
 environ.Env.read_env()
 
-TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
