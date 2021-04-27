@@ -1,8 +1,6 @@
-pip==21.1
-pipenv==2020.11.15
-python==3.7.4
 django==3.2
 django-heroku==0.4.1
+django-environ == 0.4.5
 python-decouple==3.4
 gunicorn==20.1.0
 dj-database-url==0.5.0 
