@@ -13,12 +13,15 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 import environ
-env = environ.Env()
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
 # reading .env file
 environ.Env.read_env()
 
 # False if not in os.environ
-DEBUG = True
+DEBUG = env('DEBUG')
 
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
 SECRET_KEY = env('SECRET_KEY')
@@ -40,9 +43,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# False if not in os.environ
-DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
