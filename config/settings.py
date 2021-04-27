@@ -14,8 +14,17 @@ import os
 from os import environ
 from pathlib import Path
 
-env = environ.env()
-environ.env.read_env()
+
+from os import environ
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading .env file
+environ.Env.read_env()
+
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -36,7 +45,8 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# False if not in os.environ
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
