@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-import environ
-env = environ.Env()
+import os.environ
+env = os.environ.Env()
 # reading .env file
-environ.Env.read_env()
+os.environ.Env.read_env()
 
 from pathlib import Path
 from decouple import config
