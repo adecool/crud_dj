@@ -13,5 +13,6 @@
         "blog"
     ],
     "python.pythonPath": "C:\\Users\\Tobiloba\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
-    "python.testing.promptToConfigure": false
+    "python.testing.promptToConfigure": false,
+    "git.ignoreLimitWarning": true
 }
