@@ -16,7 +16,7 @@ from decouple import config
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = config('.env')
+SECRET_KEY = config('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 LOGIN_URL = '/login/'
