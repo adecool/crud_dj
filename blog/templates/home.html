@@ -15,8 +15,13 @@
     {% endif %}
     {% for post in object_list %}
     <div class='post-entry'>
+        {% if user.is_authenticated %}
         <h1><a href="{% url 'post_detail' post.pk %}">{{post.title}}</a></h1>
         <P>{{ post.body }}</P>
+        {% else %}
+        <h1><a href="{% url 'login' %}">{{post.title}}</a></h1>
+        <P>{{ post.body }}</P>
+        {% endif %}
     </div>
     {% endfor %}
 {% endblock %}    
