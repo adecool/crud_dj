@@ -16,7 +16,7 @@ from decouple import config
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-#g1&kn77pc#9)c=f@-+&q&3s!8+73ua_!g+#&lj4c*5&#c8em3'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 LOGIN_URL = '/login/'
@@ -124,6 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Internationalization
