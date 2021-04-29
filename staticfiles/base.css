@@ -1,0 +1,55 @@
+#nav-left{
+    background-color: black;
+    margin: 0px;
+    height: 100px;
+}
+#jam{
+    background-color:darkred;
+    margin: 0px;
+    height: 90px;
+    font-family:Colonna MT;
+    font-size:90px;
+}
+#jam a{
+    background-color:darkred;
+    color: blanchedalmond;
+    margin: 0px;
+    height: 90px;
+    font-family:Colonna MT;
+    font-size:40px;
+    text-decoration: none;
+}
+body{
+    background-color:#eee;
+    font-family:arial;
+    
+}
+#nav-right a {
+    background-color: darkred;
+    color:white;
+    border: solid black 10px;
+    text-decoration: none;
+    font-size:30px;
+    border-radius: 10px 10px 10px 10px;
+    float:right;
+}
+#nav-right a:hover {
+    background-color: red;
+    color: burlywood;
+}
+.log a{
+    background-color: darkred;
+    color:white;
+    border: solid black 10px;
+    text-decoration: none;
+    font-size:30px;
+    border-radius: 10px 10px 10px 10px;
+}
+.log{
+   font-family: algerian;
+   color: dimgrey;
+}
+p{
+    font-family:Gill Sans MT;
+    color: rgb(189, 189, 24);
+ }

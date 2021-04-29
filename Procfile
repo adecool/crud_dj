@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT --threads=$WEB_CONCURRENCY --asyncore-use-poll --backlog=4096 config.wsgi:application
+web: python manage.py runserver
